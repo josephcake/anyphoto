@@ -23,10 +23,10 @@ class App extends Component {
 
   submitSearch=(e)=>{
     e.preventDefault()
-    let mathPageNum = Math.floor(Math.random()*5)
-    let mathImageNum = Math.round(Math.random(15)*80)
-    console.log(mathPageNum);
-    console.log(mathImageNum);
+    // let mathPageNum = Math.floor(Math.random()*5)
+    // let mathImageNum = Math.round(Math.random(15)*80)
+    // console.log(mathPageNum);
+    // console.log(mathImageNum);
       fetch(`https://api.pexels.com/v1/search?query=${this.state.change}&per_page=80&page=1`, {
         headers: {
           'Accept': 'application/json',
@@ -54,7 +54,7 @@ class App extends Component {
     }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className = "App" >
         <form onSubmit={(e)=>this.submitSearch(e)}>
