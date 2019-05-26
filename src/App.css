@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background: rgba(0, 12, 33, 1);
+  height: 100%;
 }
 /*
 
@@ -33,7 +34,14 @@
     transform: rotate(360deg);
   }
 } */
-h1{
+
+#errorH1{
+  color: red;
+  background-color:rgba(0, 12, 33, 1);
+  /* height: 100%; */
+}
+
+#photographerH1{
   display: none;
   color: white;
 }
@@ -76,7 +84,7 @@ img {
   /* max-height: 10%; */
   /* transform: scale(10); */
 }
-.results:hover h1{
+.results:hover #photographerH1{
   display: flex;
   font: white;
 }
