@@ -27,10 +27,11 @@ class App extends Component {
     // let mathImageNum = Math.round(Math.random(15)*80)
     // console.log(mathPageNum);
     // console.log(mathImageNum);
+    let key= "YOUR API KEY"
       fetch(`https://api.pexels.com/v1/search?query=${this.state.change}&per_page=80&page=1`, {
         headers: {
           'Accept': 'application/json',
-          "Authorization": "563492ad6f917000010000015b3a9ca8291b4f8488f76b20c81a755a"
+          "Authorization": `${key}`
         }
       })
       .then(res => res.json())
@@ -41,11 +42,12 @@ class App extends Component {
     componentDidMount(){
       let myArray = ['coffee', 'tea', 'food', 'brooklyn', 'chicago', 'japan', 'sneaker', 'iphone', 'tennis']
       let rand = myArray[Math.floor(Math.random() * myArray.length)];
+      let key= "YOUR API KEY"
 
       fetch(`https://api.pexels.com/v1/search?query=${rand}&per_page=80&page=1`, {
         headers: {
           'Accept': 'application/json',
-          "Authorization": "563492ad6f917000010000015b3a9ca8291b4f8488f76b20c81a755a"
+          "Authorization": `${key}`
         }
       })
       .then(res => res.json())
